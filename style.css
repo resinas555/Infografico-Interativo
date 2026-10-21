@@ -1,0 +1,161 @@
+/* ==========================================================================
+   CSS ANCHOR POSITIONING: TEMPLATE PARA O ALUNO (PROPORÇÃO 16:9 TRAVADA)
+   Prof. Esp. Leandro Gaudio Rosa
+   Instruções: O layout, proporção 16:9 e os pinos já estão prontos.
+   Complete apenas a seção "DESAFIO DO ALUNO" no final!
+   ========================================================================== */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0b0f19;
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topo { text-align: center; margin-bottom: 2rem; }
+.badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+.topo h1 { font-size: 1.8rem; margin-bottom: 0.3rem; color: #fff; }
+.topo p { color: #94a3b8; }
+
+.container-infografico {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cenário com Proporção 16:9 Fixa para Alinhamento Perfeito dos Pinos */
+.cenario-imagem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Garante que a proporção não distorça os pinos */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #111827;
+}
+
+.cenario-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilo dos 5 Pinos Marcadores */
+.pin-hotspot {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+  color: #07090e;
+  border: 2px solid #ffffff;
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+  transition: transform 0.2s;
+  z-index: 10;
+}
+.pin-hotspot:hover { transform: scale(1.2); }
+
+/* Posições relativas dos 5 Pinos na Proporção 16:9 */
+.pin-top-left     { top: 18%; left: 18%; }
+.pin-top-right    { top: 18%; right: 40%; }
+.pin-center       { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.pin-bottom-left  { bottom: 18%; left: 18%; }
+.pin-bottom-right { bottom: 18%; right: 18%; }
+
+/* Reset básico do Popover nativo */
+.card-ancorado {
+  border: none;
+  inset: auto;
+  margin: 0;
+  background: #1e293b;
+  color: #ffffff;
+  border: 1px solid #38bdf8;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  width: 250px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+.card-ancorado h3 { font-size: 0.95rem; color: #38bdf8; margin-bottom: 0.3rem; }
+.card-ancorado p { font-size: 0.82rem; color: #cbd5e1; line-height: 1.4; }
+
+.rodape { margin-top: 3.5rem; color: #64748b; font-size: 0.85rem; text-align: center; }
+
+/* ==========================================================================
+   👇 DESAFIO DO ALUNO: COMPLETE AS REGRAS ABAIXO COM CSS ANCHOR 👇
+   ========================================================================== */
+
+/* --- PONTO 1 (Superior Esquerdo) --- */
+#ponto-1 {
+  anchor-name: --ancora-1;
+}
+#card-1 {
+  position-anchor: --ancora-1;
+  position-area: bottom center; /* Ajuste conforme pedido no seu tema */
+  margin-top: 10px;
+  position-try-fallbacks: flip-block;
+}
+
+/* --- PONTO 2 (Superior Direito) --- */
+#ponto-2 {
+  anchor-name: --ancora-2;
+}
+#card-2 {
+  position-anchor: --ancora-2;
+  position-area: bottom center;
+  margin-top: 10px;
+  position-try-fallbacks: flip-block;
+}
+
+/* --- PONTO 3 (Centro) --- */
+#ponto-3 {
+  anchor-name: --ancora-3;
+}
+#card-3 {
+  position-anchor: --ancora-3;
+  position-area: top center;
+  margin-bottom: 10px;
+  position-try-fallbacks: flip-block;
+}
+
+/* --- PONTO 4 (Inferior Esquerdo) --- */
+#ponto-4 {
+  anchor-name: --ancora-4;
+}
+#card-4 {
+  position-anchor: --ancora-4;
+  position-area: top center;
+  margin-bottom: 10px;
+  position-try-fallbacks: flip-block;
+}
+
+/* --- PONTO 5 (Inferior Direito) --- */
+#ponto-5 {
+  anchor-name: --ancora-5;
+}
+#card-5 {
+  position-anchor: --ancora-5;
+  position-area: top center;
+  margin-bottom: 10px;
+  position-try-fallbacks: flip-block;
+}

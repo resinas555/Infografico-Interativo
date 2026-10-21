@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Prática: CSS Anchor Positioning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <span class="badge">CSS Anchor Positioning • Imagem IA (16:9) com 5 Elementos</span>
+    <h1>Tema: Estrutura Geológica de Vulcão Ativo</h1>
+    <p>Aluno(a): Rodrigo Eiji Shimabukuro Silva • Chamada: Aluno Nº 28 </p>
+  </header>
+
+  <main class="container-infografico">
+    <div class="cenario-imagem">
+      <!-- 1 Única Imagem Widescreen (16:9) Gerada na IA -->
+      <img id="foto-cenario" src="./img/vulcao.jpg" alt="Cenário Temático Widescreen 16:9">
+
+      <!-- PONTO 1: Superior Esquerdo -->
+      <button type="button" id="ponto-1" class="pin-hotspot pin-top-left" popovertarget="card-1">1</button>
+      <div id="card-1" class="card-ancorado" popover>
+        <h3>1.Nuvem de Cinzas Piroclásticas</h3>
+        <p>Mistura de gases quentes, cinzas e fragmentos de rocha lançados à atmosfera durante uma erupção vulcânica, podendo se espalhar por grandes distâncias.</p>
+      </div>
+
+      <!-- PONTO 2: Superior Direito -->
+      <button type="button" id="ponto-2" class="pin-hotspot pin-top-right" popovertarget="card-2">2</button>
+      <div id="card-2" class="card-ancorado" popover>
+        <h3>2.Cratera Superior</h3>
+        <p>Abertura localizada no topo do vulcão, formada pela atividade vulcânica, por onde podem ser expelidos lava, gases, cinzas e outros materiais.</p>
+      </div>
+
+      <!-- PONTO 3: Centro -->
+      <button type="button" id="ponto-3" class="pin-hotspot pin-center" popovertarget="card-3">3</button>
+      <div id="card-3" class="card-ancorado" popover>
+        <h3>3.Chaminé de Lava</h3>
+        <p>Canal interno que permite a subida do magma das regiões profundas do vulcão até a cratera ou outras aberturas na superfície. Quando chega à superfície, o magma passa a ser chamado de lava.</p>
+      </div>
+
+      <!-- PONTO 4: Inferior Esquerdo -->
+      <button type="button" id="ponto-4" class="pin-hotspot pin-bottom-left" popovertarget="card-4">4</button>
+      <div id="card-4" class="card-ancorado" popover>
+        <h3>4.Fumarola de Enxofre</h3>
+        <p>Abertura na superfície do vulcão por onde escapam gases vulcânicos, incluindo compostos de enxofre, como o dióxido de enxofre e o sulfeto de hidrogênio.</p>
+      </div>
+
+      <!-- PONTO 5: Inferior Direito -->
+      <button type="button" id="ponto-5" class="pin-hotspot pin-bottom-right" popovertarget="card-5">5</button>
+      <div id="card-5" class="card-ancorado" popover>
+        <h3>5.Câmara Magmática</h3>
+        <p>Região subterrânea onde o magma pode se acumular antes de subir em direção à superfície. Sua pressão e suas condições internas podem influenciar a atividade e as erupções do vulcão.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>Material Pedagógico • Prof. Esp. Leandro Gaudio Rosa • Entrega no GitHub Pages</p>
+  </footer>
+
+</body>
+</html> 
